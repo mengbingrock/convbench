@@ -127,7 +127,7 @@ if __name__ == '__main__':
     measure_option = autotvm.measure_option(builder=autotvm.LocalBuilder(), runner=runner)
     tuner = autotvm.tuner.GATuner(task)
     tuner.tune(
-        n_trial=1000,
+        n_trial=2,
         measure_option=measure_option,
         callbacks=[autotvm.callback.log_to_file("spconv2d_3x3_gemm.log")],
     )
